@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #081b29;
+    color: #ededed;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+   justify-content: space-between;
+}
+.logo{
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+
+}
+.navbar a{
+    font-size: 18px;
+    color:#ededed ;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+.home{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%;
+
+
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 70px;
+    font-weight: 700;
+
+}
+.home-content h3{
+    font-size: 35px;
+    font-weight: 700;
+    color: #00abf0;
+
+
+}
+.home-content p{
+    font-size: 16px;
+}
+.home-content .btn-box{
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 6em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+    margin-top: 20px;
+   
+
+}
+
+.btn-box:hover{
+    animation: ani 8s linear infinite;
+    border:none;
+}
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+.btn-box:before{
+    content:'';
+    position:absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index :-1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+  }
+.btn-box:hover::before{
+    filter:blur(20px);
+}
+.btn-box:active{
+    background:linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);]
+
+}
+.home-sci{
+    position:absolute;
+    bottom: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+}
